@@ -65,10 +65,11 @@ $ python3 -m venv "${HOME}/p3"
 ## 3. Activate (Use) the Virtual Environment
 
 This causes the current shell to use the virtual environment as the
-python3 directory.
+python3 directory.  The shell prompt will get a `(p3)` prefix.
 
 ```
 $ source ${HOME}/p3/bin/activate
+(p3) $
 ```
 
 The shell prompt should change to have a `p3` prefix.
@@ -76,14 +77,14 @@ The shell prompt should change to have a `p3` prefix.
 Verify that the path to `python` and `pip` are now under `${HOME}/p3`.
 
 ```
-$ which python
-$ which pip
+(p3) $ which python
+(p3) $ which pip
 ```
 
 Install/update the Python modules needed to install packages.
 
 ```
-$ pip install -U pip setuptools wheel
+(p3) $ pip install -U pip setuptools wheel
 ```
 
 
@@ -93,33 +94,39 @@ This installs the additional PyPI packages into the virtual
 environment so that the new python stays clean.
 
 ```
-$ pip install -U numpy matplotlib pandas pandas-datareader notebook torch tensorflow-cpu
+(p3) $ pip install -U numpy matplotlib pandas pandas-datareader notebook torch tensorflow-cpu
 ```
 
 ## 5. Using the Virtual Environment
 
-### Deactivate and Reactivate
+### Activate and Deactivate
 
-To stop using the virtual environment, deactivate it
-
-```
-$ deactivate
-```
-
-To start using the virtual environment, activate it
+To start using the virtual environment, activate it, the shell prompt
+will get a `(p3)` prefix
 
 ```
 $ source ${HOME}/p3/bin/activate
+(p3) $
+```
+
+To stop using the virtual environment, deactivate it; the `(p3)`
+prompt prefix will disappear.
+
+```
+(p3) $ deactivate
+$ 
 ```
 
 ### Running Jupyter
 
 To start the Jupyter notebook server run `${HOME}/p3/bin/jupyter`
+after activating the virtual environment.
 
 ```
-$ jupyter notebook
+(p3) $ jupyter notebook
 ```
 
 which will start the server in the terminal session, then open a
-browser window pointing to the server.  The working directory is the
-location where you invoked `jupyter`.
+browser window pointing to the server at `localhost:8888`.
+
+The working directory is the location where you invoked `jupyter`.
