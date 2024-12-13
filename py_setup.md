@@ -10,8 +10,11 @@
    commands to use the virtual environment.
 4. Install the additional Python packages into the virtual
    environment.
+5. Using the Environment
 
-Each time you want to use the environment, re-activate it from your shell.
+   + Each time you want to use the environment,
+     re-activate it from your shell.
+   + Running Jupyter Notebook.
 
 ## 1. Install Own Python3
 
@@ -93,7 +96,9 @@ environment so that the new python stays clean.
 $ pip install -U numpy matplotlib pandas pandas-datareader notebook torch tensorflow-cpu
 ```
 
-## Deactivate and Reactivate
+## 5. Using the Virtual Environment
+
+### Deactivate and Reactivate
 
 To stop using the virtual environment, deactivate it
 
@@ -106,3 +111,15 @@ To start using the virtual environment, activate it
 ```
 $ source ${HOME}/p3/bin/activate
 ```
+
+### Running Jupyter
+
+To start the Jupyter notebook server run `${HOME}/p3/bin/jupyter`
+
+```
+$ jupyter notebook
+```
+
+which will start the server in the terminal session, then open a
+browser window pointing to the server.  The working directory is the
+location where you invoked `jupyter`.
