@@ -13,7 +13,7 @@
 
 Each time you want to use the environment, re-activate it from your shell.
 
-## Install Own Python3
+## 1. Install Own Python3
 
 ### macOS
 
@@ -48,7 +48,7 @@ Each time you want to use the environment, re-activate it from your shell.
    $ make -j 4 install
    ```
 
-## Create Virtual Environment based on the Python
+## 2. Create Virtual Environment based on the Python
 
 This is done so that all the additional package installs (which will
 change over time) will not affect the above Python installation.
@@ -59,7 +59,7 @@ The virtual environment will be installed in `$HOME/p3`
 $ python3 -m venv "${HOME}/p3"
 ```
 
-## Activate (Use) the Virtual Environment
+## 3. Activate (Use) the Virtual Environment
 
 This causes the current shell to use the virtual environment as the
 python3 directory.
@@ -75,4 +75,34 @@ Verify that the path to `python` and `pip` are now under `${HOME}/p3`.
 ```
 $ which python
 $ which pip
+```
+
+Install/update the Python modules needed to install packages.
+
+```
+$ pip install -U pip setuptools wheel
+```
+
+
+## 4. Install Packages from PyPI
+
+This installs the additional PyPI packages into the virtual
+environment so that the new python stays clean.
+
+```
+$ pip install -U numpy matplotlib pandas pandas-datareader notebook torch tensorflow-cpu
+```
+
+## Deactivate and Reactivate
+
+To stop using the virtual environment, deactivate it
+
+```
+$ deactivate
+```
+
+To start using the virtual environment, activate it
+
+```
+$ source ${HOME}/p3/bin/activate
 ```
