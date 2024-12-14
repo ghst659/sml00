@@ -6,6 +6,7 @@ Shared space for ML hello-worlds.
   in `${HOME}/p3`.
 * [Setting up SSH access on github](https://github.com/ghst659/sml00/blob/main/ssh_setup.md)
 * Using SSH to work on this repository:
+
   0. Activate the python virtual envronment.
 
      ```
