@@ -13,15 +13,16 @@ Shared space for ML hello-worlds.
      $ source ${HOME}/p3/bin/activate
      ```
 
-  2. Clone to your computer:
+  2. Clone to your computer, and change to that working dir.
 
      ```
      (p3) $ git clone git@github.com:ghst659/sml00.git`
+     (p3) $ cd sml00
      ```
 
   3. Work normally with `git add`, `git commit` etc.
   4. Push to the `origin/main` branch.
 
      ```
-     (p3 $ git push
+     (p3) $ git push
      ```
