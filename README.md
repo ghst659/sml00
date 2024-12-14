@@ -20,7 +20,23 @@ Shared space for ML hello-worlds.
      (p3) $ cd sml00
      ```
 
-  3. Work normally with `git add`, `git commit` etc.
+  3. Running the quickstart Jupyter notebook
+
+     1. Start the notebook server, typically at `http://localhost:8888`.
+        ```
+        (p3) $ jupyter notebook
+        ```
+
+     2. Inside the opened webpage, use File > Open... to open the
+        `torch_quickstart.ipynb` notebook.
+
+     3. When done, in the notebook, File > Close and Shut Down Notebook
+
+     4. In the Jupyter home page (`http://localhost:8888`),
+        shut down the server with File > Shut Down
+
+  3. Work normally with edits, `git add`, `git commit` etc.
+
   4. Push to the `origin/main` branch.
 
      ```
