@@ -9,6 +9,24 @@ import unittest
 
 import iolib
 
+class TestMakeProphetFrame(unittest.TestCase):
+
+    def test_baseline(self):
+        source = pd.DataFrame({
+            "Date": [np.datetime64("2024-12-13"), np.datetime64("2024-12-12")],
+            "Close/Last": [191.38, 193.63],
+            "Volume": [18883220, 25197760],
+            "Open": [192.71, 196.30],
+            "High": [194.34, 196.7053],
+            "Low": [191.26, 193.28]
+        })
+        got = iolib.make_prophet_frame(source, "Date", "Volume")
+        want = pd.DataFrame({
+            "ds": [np.datetime64("2024-12-13"), np.datetime64("2024-12-12")],
+            "y": [18883220, 25197760]
+        })
+        pd.testing.assert_frame_equal(got, want)
+
 class TestReadNasdaq(unittest.TestCase):
 
     def test_baseline(self):
