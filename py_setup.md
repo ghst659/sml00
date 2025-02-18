@@ -94,7 +94,7 @@ This installs the additional PyPI packages into the virtual
 environment so that the new python stays clean.
 
 ```
-(p3) $ pip install -U numpy matplotlib pandas pandas-datareader notebook torch torchvision tensorflow scipy scikit-learn statsmodels prophet
+(p3) $ pip install -U numpy matplotlib pandas pandas-datareader notebook torch torchvision tensorflow scipy scikit-learn statsmodels prophet datasets nlp
 ```
 
 ## 5. Using the Virtual Environment
